@@ -21,7 +21,6 @@ import retrofit.client.OkClient;
 import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
-import rx.subjects.BehaviorSubject;
 import rx.subjects.PublishSubject;
 
 public class DataManager implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener,
@@ -37,14 +36,14 @@ public class DataManager implements GoogleApiClient.ConnectionCallbacks, GoogleA
     private GoogleApiClient mGoogleApiClient;
     private String mLatitude;
     private String mLongitude;
-    private PublishSubject<VenueResponse> mVenuePublishSubject;
+    private PublishSubject<VenueResponse> mVenueBehaviourSubject;
     private PublishSubject<String> mLatLongPublishSubject;
 
     public DataManager(SharedPreferences prefs, Context context) {
         this.mSharedPref = prefs;
         this.mContext = context;
         this.mVenueService = getService(VenueService.class, API_URL, new ApiInterceptor());
-        mVenuePublishSubject = PublishSubject.create();
+        mVenueBehaviourSubject = PublishSubject.create();
         mLatLongPublishSubject = PublishSubject.create();
     }
 
@@ -59,9 +58,9 @@ public class DataManager implements GoogleApiClient.ConnectionCallbacks, GoogleA
                 })
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
-        .subscribe(mVenuePublishSubject);
+                .subscribe(mVenueBehaviourSubject);
 
-        return mVenuePublishSubject;
+        return mVenueBehaviourSubject;
     }
 
 

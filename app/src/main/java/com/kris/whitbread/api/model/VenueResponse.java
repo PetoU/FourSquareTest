@@ -5,12 +5,12 @@ import java.util.List;
 public class VenueResponse {
 
     private Meta meta;
-    private List<Venue> response;
+    private Response response;
 
     public VenueResponse() {
     }
 
-    public VenueResponse(Meta meta, List<Venue> response) {
+    public VenueResponse(Meta meta, Response response) {
         this.meta = meta;
         this.response = response;
     }
@@ -23,11 +23,11 @@ public class VenueResponse {
         this.meta = meta;
     }
 
-    public List<Venue> getResponse() {
+    public Response getResponse() {
         return response;
     }
 
-    public void setResponse(List<Venue> response) {
+    public void setResponse(Response response) {
         this.response = response;
     }
 }

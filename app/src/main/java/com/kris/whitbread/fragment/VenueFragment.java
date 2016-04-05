@@ -13,6 +13,9 @@ import com.kris.whitbread.App;
 import com.kris.whitbread.DataManager;
 import com.kris.whitbread.R;
 import com.kris.whitbread.adapter.VenueAdapter;
+import com.kris.whitbread.api.model.Venue;
+
+import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -58,9 +61,10 @@ public class VenueFragment extends Fragment {
     void onSearchTextChanged(CharSequence s, int start, int before, int count) {
         final String searchString = s.toString();
 
-        mDataManager.getVenues("sushi")
+        mDataManager.getVenues(searchString)
                 .subscribe(venueResponse -> {
-                    venueResponse.getResponse();
+                    final List<Venue> venues = venueResponse.getResponse().getVenues();
+                    mVenueAdapter.swapItems(venues);
                 }, Throwable::printStackTrace);
 
     }

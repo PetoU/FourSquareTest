@@ -1,17 +1,17 @@
 package com.kris.whitbread.api.model;
 
+import java.util.List;
+
 public class HereNow {
 
     private long count;
     private String summary;
-
-    //could find example Model, therefor Object
-    private Object[] groups;
+    private List<Group> groups;
 
     public HereNow() {
     }
 
-    public HereNow(long count, String summary, Object[] groups) {
+    public HereNow(long count, String summary, List<Group> groups) {
         this.count = count;
         this.summary = summary;
         this.groups = groups;
@@ -33,11 +33,11 @@ public class HereNow {
         this.summary = summary;
     }
 
-    public Object[] getGroups() {
+    public List<Group> getGroups() {
         return groups;
     }
 
-    public void setGroups(Object[] groups) {
+    public void setGroups(List<Group> groups) {
         this.groups = groups;
     }
 }
