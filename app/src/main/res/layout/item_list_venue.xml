@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/m16"
+    >
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/photo"
+        app:riv_border_width="1dp"
+        app:riv_corner_radius="35dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toRightOf="@id/photo"
+        android:layout_marginLeft="@dimen/m8"
+        >
+
+        <TextView
+            android:id="@+id/name"
+            style="@style/Text.Medium.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="NameRestaurant"
+            />
+
+        <TextView
+            android:id="@+id/description"
+            style="@style/Text.Medium.Italic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/m32"
+            android:layout_marginTop="@dimen/m8"
+            tools:text="description ;lsad;askd;l kasl;kdl; askdkslkdsjkdjasdnaskjbdjkasbdkasb"
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
