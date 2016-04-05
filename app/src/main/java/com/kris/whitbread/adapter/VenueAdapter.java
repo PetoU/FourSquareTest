@@ -10,6 +10,7 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.kris.whitbread.R;
+import com.kris.whitbread.api.model.Venue;
 import com.makeramen.roundedimageview.RoundedImageView;
 import com.squareup.picasso.Picasso;
 

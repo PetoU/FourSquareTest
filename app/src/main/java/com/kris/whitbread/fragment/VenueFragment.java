@@ -58,12 +58,12 @@ public class VenueFragment extends Fragment {
     void onSearchTextChanged(CharSequence s, int start, int before, int count) {
         final String searchString = s.toString();
 
-//        mDataManager.getVenues(searchString)
-//                .subscribe(this::parseVenues, Throwable::printStackTrace);
+        mDataManager.getVenues("sushi")
+                .subscribe(venueResponse -> {
+                    venueResponse.getResponse();
+                }, Throwable::printStackTrace);
 
     }
-
-
 
 
 }
