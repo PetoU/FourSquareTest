@@ -54,4 +54,5 @@ dependencies {
     compile 'com.squareup.okhttp:okhttp:2.0.0'
     compile 'com.squareup.okhttp:okhttp-urlconnection:2.0.0'
     compile 'com.makeramen:roundedimageview:2.0.0'
+    compile 'com.google.android.gms:play-services:7.8.0'
 }
