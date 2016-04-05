@@ -30,11 +30,11 @@
             style="@style/Text.Medium.Bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="NameRestaurant"
+            tools:text="Name"
             />
 
         <TextView
-            android:id="@+id/description"
+            android:id="@+id/address"
             style="@style/Text.Medium.Italic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
