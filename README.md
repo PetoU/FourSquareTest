@@ -1,4 +1,4 @@
-# whitBread
+# Foursquare integration
 
 This App shows Venues near your location as you type into search.
 
